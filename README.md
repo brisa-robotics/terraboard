@@ -139,7 +139,8 @@ docker run --name db \
   -e POSTGRES_DB=gorm \
   -e POSTGRES_PASSWORD="<mypassword>" \
   --net terranet \
-  --restart=always postgres -d
+  -d \
+  --restart=always postgres
 docker run -p 8080:8080 \
   -e AWS_REGION="<region>" \
   -e AWS_ACCESS_KEY_ID="${AWS_ACCESS_KEY_ID}" \
